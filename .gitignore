@@ -7,6 +7,9 @@ out-tsc
 *.tsbuildinfo
 .expo
 .expo-shared
+_site/
+.bundle/
+vendor/bundle
 
 # dependencies
 node_modules

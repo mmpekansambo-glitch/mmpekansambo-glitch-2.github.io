@@ -100,6 +100,17 @@
     radial-gradient(ellipse at 7% 64%, hsl(var(--primary) / .07), transparent 28rem),
     hsl(var(--background));
 }
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 30;
+  padding: 10px 14px;
+  color: hsl(var(--primary-foreground));
+  background: hsl(var(--primary));
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: translateY(0); }
 .portfolio-shell::after {
   content: '';
   position: fixed;
@@ -347,6 +358,8 @@
 .contact-panel p { max-width: 550px; line-height: 1.75; opacity: .85; }
 .email-link { display: inline-flex; align-items: center; gap: 11px; margin-top: 15px; color: hsl(var(--primary)); background: hsl(var(--primary-foreground)); padding: 14px 18px; text-decoration: none; border-radius: 999px; font-weight: 600; font-size: .9rem; transition: transform 180ms ease; }
 .email-link:hover { transform: translateY(-2px); }
+.contact-social { margin-top: 20px !important; }
+.contact-social a { display: inline-flex; align-items: center; gap: 8px; color: inherit; text-underline-offset: 4px; }
 .site-footer {
   width: min(1160px, calc(100% - 64px));
   margin: 0 auto;

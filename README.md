@@ -1,6 +1,6 @@
 # Mwengwe Mpekansambo — Portfolio
 
-The Jekyll site in this repository's root is the canonical GitHub Pages portfolio. A separate React companion app lives in `artifacts/portfolio-app/` and is excluded from the Jekyll publication.
+The Jekyll site in this repository's root is the canonical GitHub Pages portfolio. A separate React companion app lives in `artifacts/portfolio-app/` and is excluded from the Jekyll publication. When updating shared biography or experience details, make the same content change in both versions.
 
 ## Publish with GitHub Pages
 
@@ -17,6 +17,7 @@ The site uses GitHub Pages' Jekyll build. No separate build command is needed to
 - Each page has YAML front matter for its title, description, and permalink.
 - Shared page structure is in `_layouts/default.html`; navigation and footer are in `_includes/`.
 - Visual styles are in `assets/css/site.css`. The small `assets/js/theme.js` file handles the light/dark theme switch.
+- The React companion's matching content and presentation are in `artifacts/portfolio-app/src/App.tsx` and `artifacts/portfolio-app/src/index.css`.
 - Update the site's title, description, URL, and publishing exclusions in `_config.yml`.
 - Do not add the résumé, its contact details, or other private material to the public site.
 

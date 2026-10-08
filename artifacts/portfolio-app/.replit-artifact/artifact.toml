@@ -1,5 +1,5 @@
 kind = "web"
-previewPath = "/portfolio-app/"
+previewPath = "/"
 title = "Mwengwe Mpekansambo — Portfolio"
 description = "A personal portfolio companion for Mwengwe Mpekansambo, presenting her education, experience, interests, and work with a warm cottagecore-inspired visual identity."
 version = "1.0.0"
@@ -8,7 +8,7 @@ router = "path"
 
 [[services]]
 name = "web"
-paths = [ "/portfolio-app/" ]
+paths = [ "/" ]
 localPort = 25804
 
 [services.development]
@@ -25,4 +25,4 @@ to = "/index.html"
 
 [services.env]
 PORT = "25804"
-BASE_PATH = "/portfolio-app/"
+BASE_PATH = "/"

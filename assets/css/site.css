@@ -276,7 +276,7 @@ p {
 }
 
 .home-intro h1 {
-  max-width: 11ch;
+  max-width: none;
   margin-bottom: 1.65rem;
 }
 

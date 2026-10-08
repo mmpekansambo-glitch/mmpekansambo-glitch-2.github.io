@@ -124,7 +124,7 @@ function HomePage() {
   return (
     <>
       <PageMeta route="/" />
-      <main className="page-content">
+      <main className="page-content" id="page-content">
         <section className="home-hero" aria-labelledby="home-title">
           <div className="reveal">
             <div className="eyebrow">A little about what moves me</div>
@@ -199,7 +199,7 @@ function AboutPage() {
   return (
     <>
       <PageMeta route="/about" />
-      <main className="page-content">
+      <main className="page-content" id="page-content">
         <section className="page-intro">
           <div className="eyebrow">A life in more than one register</div>
           <h1 className="content-heading">About me</h1>
@@ -248,7 +248,7 @@ function ExperiencePage() {
   return (
     <>
       <PageMeta route="/experience" />
-      <main className="page-content">
+      <main className="page-content" id="page-content">
         <section className="page-intro">
           <div className="eyebrow">Work, in chapters</div>
           <h1 className="content-heading">Experience</h1>
@@ -300,7 +300,7 @@ function ContactPage() {
   return (
     <>
       <PageMeta route="/contact" />
-      <main className="page-content">
+      <main className="page-content" id="page-content">
         <section className="page-intro">
           <div className="eyebrow">A note is always welcome</div>
           <h1 className="content-heading">Let’s talk.</h1>
@@ -325,7 +325,7 @@ function NotFoundPage() {
   return (
     <>
       <PageMeta route="404" />
-      <main className="page-content not-found">
+      <main className="page-content not-found" id="page-content">
         <div>
           <div className="eyebrow" style={{ justifyContent: 'center' }}>A small wrong turn</div>
           <h1>Not this page.</h1>
@@ -345,6 +345,7 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 function Router({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
   return (
     <div className="portfolio-shell">
+      <a className="skip-link" href="#page-content">Skip to main content</a>
       <Header dark={dark} onToggle={onToggle} />
       <RoutedErrorBoundary>
         <Switch>
