@@ -1,0 +1,19 @@
+Build my personal portfolio as a static Markdown site hosted on GitHub Pages. Use Jekyll, with page content in Markdown and YAML front matter. This will be a GitHub user site at myusername.github.io: leave baseurl empty and use URL filters so links work.
+
+The entire Replit project must be the publish-ready Jekyll site. Place index.md, _config.yml, _layouts, _includes, assets, and all other website files directly in the project’s root folder. Do not place the website inside a nested folder such as jekyll-site, website, app, artifacts, or dist. GitHub Pages will publish from main and / (root), so the root folder must contain the actual website.
+
+Create Home, About, Work Experience, and Contact pages, with navigation and a footer. Use a simple, responsive, single-column design that works on phones and desktops, has accessible color contrast, and uses semantic HTML.
+
+Before building, ask me about: (1) reference websites I like and what I like about them, (2) whether I want a light theme or light and dark themes, and (3) the feel of the fonts. Ask me to paste my LinkedIn About and experience text or provide my résumé. Do not fetch my information from a URL. Ask whether I am comfortable showing an email address through a mailto link; explain that it will be public and requires visitors to have an email app.
+
+After I answer, write a short PLAN.md summarizing the site and ask for my approval before building.
+
+Use reusable Jekyll layouts and includes, and keep content separate from design. Include SEO tags, a sitemap, and a favicon. Use plain HTML and CSS with only minimal JavaScript. Do not add a backend, database, blog, CMS, contact form backend, animation system, complex framework, unnecessary libraries, or third-party trackers.
+
+Include _config.yml and a README explaining how to update the site, preview it locally, and run Lighthouse. The site should build on GitHub Pages without manual build steps. Check that navigation works, the site displays properly at 375px and 1280px widths, and Lighthouse scores at least 90 in Performance, Accessibility, Best Practices, and SEO.
+
+Do not invent my achievements, employers, clients, metrics, or projects. Clearly mark anything I have not supplied as a placeholder. Briefly explain important technical choices and list any assumptions separately.
+
+Replace myusername with my actual GitHub username. The final project must be only a static Jekyll site using Markdown, HTML, and CSS, with minimal JavaScript. Do not create a separate preview app, server, database, React or Vite project, Node application, monorepo, package.json, or framework-based app.
+
+Before finishing, verify that the project can be published directly through GitHub Pages from the main branch and / (root). Confirm that index.md, _config.yml, _layouts, _includes, and all website assets are located directly in the project root. If the website is inside another folder or the project contains a separate application, correct the structure automatically. Do not ask me to move or reorganize files manually. Do not finish until the repository root contains the complete, publish-ready Jekyll site.
