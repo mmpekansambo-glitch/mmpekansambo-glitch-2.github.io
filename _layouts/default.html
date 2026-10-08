@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Mwengwe Mpekansambo, home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.8 35.1c.2-8.9.3-14.4.3-23.2M21 24c-6.8-.8-10.2-4-11-9.2 5.8.1 9.8 2.5 11 9.2ZM21.1 29.3c6.7-.4 10.3-3.2 11.8-8.3-5.8-.7-10.1 1.2-11.8 8.3Z" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 8.3c-1.4-1.8-1.4-3.6 0-5.3 1.4 1.7 1.4 3.5 0 5.3Z" fill="currentColor"/>
+              <path d="M15.8 35.2h10.4" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Mwengwe Mpekansambo</span>
+        </a>
+        {% include nav.html %}
+      </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+  </body>
+</html>

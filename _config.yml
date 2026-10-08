@@ -1,0 +1,46 @@
+title: "Mwengwe Mpekansambo"
+description: >-
+  Mwengwe Mpekansambo is an MBA candidate, former TMT investment banking
+  associate, and advocate for women's financial education and participation in STEM.
+url: "https://mmpekansambo-glitch.github.io"
+baseurl: ""
+lang: en
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author:
+  name: "Mwengwe Mpekansambo"
+
+social:
+  name: "Mwengwe Mpekansambo"
+  links:
+    - "https://www.linkedin.com/in/mmpekansambo"
+
+exclude:
+  - PLAN.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - tsconfig.json
+  - tsconfig.base.json
+  - .replit
+  - .replitignore
+  - replit.md
+  - artifacts
+  - lib
+  - scripts
+  - attached_assets
+  - node_modules
+  - .local
+  - .agents
+  - .git
+  - .github
+  - _site
+  - .jekyll-cache

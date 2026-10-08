@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/portfolio-app/"
+title = "Mwengwe Mpekansambo — Portfolio"
+description = "A personal portfolio companion for Mwengwe Mpekansambo, presenting her education, experience, interests, and work with a warm cottagecore-inspired visual identity."
+version = "1.0.0"
+id = "artifacts/portfolio-app"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/portfolio-app/" ]
+localPort = 25804
+
+[services.development]
+run = "pnpm --filter @workspace/portfolio-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/portfolio-app", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/portfolio-app/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25804"
+BASE_PATH = "/portfolio-app/"
