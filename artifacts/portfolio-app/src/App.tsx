@@ -117,11 +117,11 @@ function Header({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
   );
 }
 
-function Footer() {
+function Footer({ isHome }: { isHome: boolean }) {
   return (
     <footer className="site-footer">
       <span className="footer-note"><Leaf size={14} strokeWidth={1.6} /> Rooted in Zambia, growing everywhere.</span>
-      <span>© {new Date().getFullYear()} Mwengwe Mpekansambo</span>
+      <span>{isHome ? '© Mwengwe Mpekansambo' : `© ${new Date().getFullYear()} Mwengwe Mpekansambo`}</span>
     </footer>
   );
 }
@@ -203,17 +203,17 @@ function HomePage() {
             <article className="fact-card">
               <div className="fact-kicker">Now · Berkeley</div>
               <h3>Questioning the Status Quo</h3>
-              <p>MBA candidate at UC Berkeley Haas, expected May 2027.</p>
+              <p>MBA candidate at UC Berkeley Haas.</p>
             </article>
             <article className="fact-card">
               <div className="fact-kicker">Before · Stanford</div>
               <h3>Numbers &amp; narrative</h3>
-              <p>BA in Economics with a minor in Creative Writing, June 2022.</p>
+              <p>BA in Economics with a minor in Creative Writing.</p>
             </article>
             <article className="fact-card">
               <div className="fact-kicker">Always · Zambia</div>
               <h3>Grounded in place</h3>
-              <p>Co-founded an agriculture company focused on local sourcing and ethical management.</p>
+              <p>Part of the team behind an agriculture company focused on local sourcing and ethical management.</p>
             </article>
           </div>
         </section>
@@ -368,6 +368,7 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 }
 
 function Router({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
+  const [location] = useLocation();
   return (
     <div className="portfolio-shell">
       <a className="skip-link" href="#page-content">Skip to main content</a>
@@ -382,7 +383,7 @@ function Router({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
           <Route component={NotFoundPage} />
         </Switch>
       </RoutedErrorBoundary>
-      <Footer />
+      <Footer isHome={location === '/'} />
     </div>
   );
 }
