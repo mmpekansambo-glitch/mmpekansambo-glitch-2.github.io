@@ -120,7 +120,7 @@ function Header({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
 function Footer({ isHome }: { isHome: boolean }) {
   return (
     <footer className="site-footer">
-      <span className="footer-note"><Leaf size={14} strokeWidth={1.6} /> Rooted in Zambia, growing everywhere.</span>
+      <span className="footer-note"><Leaf size={14} strokeWidth={1.6} /> Rooted in Africa, growing everywhere.</span>
       <span>{isHome ? '© Mwengwe Mpekansambo' : `© ${new Date().getFullYear()} Mwengwe Mpekansambo`}</span>
     </footer>
   );
