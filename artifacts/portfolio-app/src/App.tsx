@@ -289,13 +289,19 @@ function InterestsPage() {
   );
 }
 
-const journeyEntries = [
-  { organization: 'UC Berkeley Haas', description: 'MBA candidate, expected May 2027.' },
-  { organization: 'Gen Digital', description: 'Associate Intern, Corporate Development & Strategic Partnerships (June–August 2026), analyzing fintech acquisitions and exploring agentic AI.' },
-  { organization: 'Jefferies LLC', description: 'TMT Investment Banking Associate (June 2024–June 2025), closing 10 M&A, debt, and equity transactions totaling $60B+.' },
-  { organization: 'Jefferies LLC', description: 'TMT Investment Banking Analyst (July 2022–May 2024), supporting financial advisory, recruitment, and inclusion initiatives.' },
-  { organization: 'Stanford University', description: 'B.A. in Economics with a minor in Creative Writing, graduated June 2022.' },
-  { organization: 'Hotchkis & Wiley', description: 'Asset Management Intern (June–August 2021), researching industry risks and presenting an investment pitch on Ingredion.' },
+const journeyEntries: Array<{
+  organization: string;
+  description: string;
+  endDate?: string;
+  endDateTime?: string;
+  endDateQualifier?: string;
+}> = [
+  { organization: 'UC Berkeley Haas', description: 'MBA candidate.', endDate: 'May 2027', endDateTime: '2027-05', endDateQualifier: 'Expected' },
+  { organization: 'Gen Digital', description: 'Associate Intern, Corporate Development & Strategic Partnerships, analyzing fintech acquisitions and exploring agentic AI.', endDate: 'August 2026', endDateTime: '2026-08' },
+  { organization: 'Jefferies LLC', description: 'TMT Investment Banking Associate, closing 10 M&A, debt, and equity transactions totaling $60B+.', endDate: 'June 2025', endDateTime: '2025-06' },
+  { organization: 'Jefferies LLC', description: 'TMT Investment Banking Analyst, supporting financial advisory, recruitment, and inclusion initiatives.', endDate: 'May 2024', endDateTime: '2024-05' },
+  { organization: 'Stanford University', description: 'B.A. in Economics with a minor in Creative Writing.', endDate: 'June 2022', endDateTime: '2022-06' },
+  { organization: 'Hotchkis & Wiley', description: 'Asset Management Intern, researching industry risks and presenting an investment pitch on Ingredion.', endDate: 'August 2021', endDateTime: '2021-08' },
   { organization: 'Mwedi Innovations Limited', description: 'Director and co-founder of an agriculture company in Zambia focused on local sourcing and ethical produce management.' },
 ];
 
@@ -310,12 +316,19 @@ function JourneyPage() {
           <p>Education, investing, advisory, and company building—a few milestones along the way.</p>
         </section>
         <ol className="journey-list" aria-label="Education and professional experience" role="list">
-          {journeyEntries.map(({ organization, description }, index) => (
+          {journeyEntries.map(({ organization, description, endDate, endDateTime, endDateQualifier }, index) => (
             <li className="journey-entry" key={`${organization}-${index}`}>
               <p><strong>{organization}</strong> — {description}</p>
+              {endDate && endDateTime && (
+                <div className="journey-date-group">
+                  <time className="journey-end-date" dateTime={endDateTime}>{endDate}</time>
+                  {endDateQualifier && <span className="journey-date-qualifier">{endDateQualifier}</span>}
+                </div>
+              )}
             </li>
           ))}
         </ol>
+        <p className="journey-note">Dated milestones are listed newest first; Mwedi Innovations is included without a date because none was supplied.</p>
       </main>
     </>
   );
