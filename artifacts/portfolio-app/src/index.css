@@ -327,20 +327,10 @@
 .content-section { padding: 18px 0 72px; }
 .content-section h2 { font: 400 2rem var(--app-font-serif); letter-spacing: -.04em; margin: 0 0 21px; }
 .body-copy { color: hsl(var(--muted-foreground)); line-height: 1.85; font-size: .95rem; }
-.education-list { border-top: 1px solid hsl(var(--border)); }
-.education-item { padding: 22px 0; border-bottom: 1px solid hsl(var(--border)); display: grid; grid-template-columns: 1fr auto; gap: 12px; }
-.education-item h3 { font: 400 1.35rem var(--app-font-serif); margin: 0 0 5px; }
-.education-item p { color: hsl(var(--muted-foreground)); margin: 0; font-size: .86rem; }
-.education-date { font: .68rem var(--app-font-mono); color: hsl(var(--primary)); text-align: right; padding-top: 5px; white-space: nowrap; }
-.experience-list { border-top: 1px solid hsl(var(--border)); margin-bottom: 92px; }
-.experience-entry { display: grid; grid-template-columns: 185px 1fr; gap: 44px; padding: 32px 0 36px; border-bottom: 1px solid hsl(var(--border)); }
-.experience-date { font: .69rem var(--app-font-mono); text-transform: uppercase; letter-spacing: .03em; color: hsl(var(--muted-foreground)); line-height: 1.8; }
-.experience-entry h2 { font: 400 1.7rem var(--app-font-serif); margin: 0 0 4px; }
-.experience-role { color: hsl(var(--primary)); font-size: .85rem; margin: 0 0 15px; }
-.experience-entry p, .experience-entry li { color: hsl(var(--muted-foreground)); line-height: 1.75; font-size: .92rem; }
-.experience-entry p { margin: 0 0 9px; }
-.experience-entry ul { margin: 11px 0 0; padding-left: 19px; }
-.experience-entry li { margin: 5px 0; padding-left: 4px; }
+.journey-list { list-style: none; padding: 0; margin: 0 0 92px; border-top: 1px solid hsl(var(--border)); }
+.journey-entry { padding: 22px 0; border-bottom: 1px solid hsl(var(--border)); }
+.journey-entry p { margin: 0; color: hsl(var(--muted-foreground)); line-height: 1.8; font-size: .96rem; }
+.journey-entry strong { color: hsl(var(--foreground)); font-weight: 600; }
 .contact-panel {
   margin: 7px 0 98px;
   padding: clamp(28px, 6vw, 62px);
@@ -421,8 +411,8 @@
   .page-intro { padding: 62px 0 40px; }
   .two-column { grid-template-columns: 1fr; gap: 32px; }
   .content-section { padding-bottom: 48px; }
-  .experience-entry { grid-template-columns: 1fr; gap: 10px; padding: 25px 0; }
-  .experience-list { margin-bottom: 68px; }
+  .journey-entry { padding: 20px 0; }
+  .journey-list { margin-bottom: 68px; }
   .contact-panel { margin-bottom: 65px; }
   .site-footer { min-height: 82px; gap: 16px; font-size: .59rem; }
 }
