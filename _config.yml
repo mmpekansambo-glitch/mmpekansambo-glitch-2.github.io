@@ -3,7 +3,7 @@ description: >-
   Mwengwe Mpekansambo is an MBA candidate, former TMT investment banking
   associate, and advocate for women's financial education and participation in STEM.
 url: "https://mmpekansambo-glitch.github.io"
-baseurl: ""
+baseurl: "/mmpekansambo-glitch-2.github.io"
 lang: en
 markdown: kramdown
 permalink: pretty

@@ -7,9 +7,11 @@ The Jekyll site in this repository's root is the canonical GitHub Pages portfoli
 1. In the repository on GitHub, open **Settings → Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**.
 3. Select the `main` branch and `/ (root)` folder, then save.
-4. For a GitHub user site, the repository must be named `mmpekansambo-glitch.github.io`.
+4. This repository is a GitHub Pages project site, published at `https://mmpekansambo-glitch.github.io/mmpekansambo-glitch-2.github.io/`.
 
-The site uses GitHub Pages' Jekyll build. No separate build command is needed to publish. `_config.yml` sets `baseurl` to an empty string for a user site. Internal links, styles, and assets use Jekyll URL filters.
+The site uses GitHub Pages' Jekyll build. No separate build command is needed to publish. `_config.yml` keeps `url` as `https://mmpekansambo-glitch.github.io` and sets `baseurl` to `/mmpekansambo-glitch-2.github.io`. Internal links, styles, images, scripts, and canonical URLs use Jekyll URL filters to include that repository prefix.
+
+Only use an empty `baseurl` if the site is actually published at the domain root (for example, a user-site repository named `mmpekansambo-glitch.github.io`). The root folder selected in Pages settings is the source folder, not the published URL path. This Jekyll setting is independent of the React companion's root Replit preview.
 
 ## Update the site
 
