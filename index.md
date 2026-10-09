@@ -39,7 +39,7 @@ wide: true
   <p class="eyebrow">The current chapter</p>
   <h2 id="current-chapter">Learning, listening, and looking ahead.</h2>
   <p>I’m pursuing my MBA at UC Berkeley Haas after earning a B.A. in Economics with a minor in Creative Writing from Stanford. Before business school, I worked with a talented, diverse team to provide financial advisory and capital-raising services to clients across Technology, Media, and Telecom.</p>
-  <p>My work has kept me close to the questions that shape a company’s next chapter; my love of stories reminds me to stay curious about the people behind them.</p>
+  <p>Every chapter has started with the same question: who gets access, and what changes when they do? I’ve asked it of companies raising capital, of farmers bringing goods to market, and of women in Zambia building something of their own.</p>
 </section>
 
 <section class="home-section" aria-labelledby="outside-work">

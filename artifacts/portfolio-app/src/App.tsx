@@ -175,7 +175,7 @@ function HomePage() {
             <h2 id="home-note-title">Good questions<br />make room.</h2>
           </div>
           <p>
-            My work has taken me from financial advisory and capital-raising across Technology, Media and Telecom to questions of growth, technology, and partnership. Away from the deal room, I keep returning to stories, agriculture, and the possibility of making finance more accessible—especially for women in Zambia.
+            Every chapter has started with the same question: who gets access, and what changes when they do? I’ve asked it of companies raising capital, of farmers bringing goods to market, and of women in Zambia building something of their own.
           </p>
         </section>
 
