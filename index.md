@@ -24,7 +24,7 @@ permalink: /
   <p class="eyebrow">Outside the spreadsheets</p>
   <h2 id="outside-work">Books, stories, and small green things.</h2>
   <p>You might find me reading, writing or editing a story, taking photographs, or pottering with plants. I also love agriculture, African politics, and helping make financial knowledge more accessible.</p>
-  <p class="intro-actions"><a class="text-link" href="{{ '/experience/' | relative_url }}">Explore my experience <span aria-hidden="true">→</span></a></p>
+  <p class="intro-actions"><a class="text-link" href="{{ '/experience/' | relative_url }}">Explore my journey <span aria-hidden="true">→</span></a></p>
 </section>
 
 <section class="closing-note" aria-label="Contact invitation">

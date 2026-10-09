@@ -580,6 +580,28 @@ p {
   margin-top: 1.5rem;
 }
 
+.journey-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.journey-entry {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.journey-entry p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+
+.journey-entry strong {
+  color: var(--ink);
+}
+
 .contact-note h2 {
   margin-bottom: 0.6rem;
   font-size: 1.6rem;

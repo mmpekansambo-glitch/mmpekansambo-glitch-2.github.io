@@ -40,4 +40,4 @@ Jekyll writes its generated site to `_site/`. That folder is excluded from publi
 
 ## Check with Lighthouse
 
-With the local preview open in Chrome, open DevTools, select **Lighthouse**, and run the Performance, Accessibility, Best Practices, and SEO audits for mobile and desktop. Target a score of 90 or higher in each category. Check the home, About, Work Experience, and Contact pages, including a 375px-wide mobile viewport and a 1280px-wide desktop viewport.
+With the local preview open in Chrome, open DevTools, select **Lighthouse**, and run the Performance, Accessibility, Best Practices, and SEO audits for mobile and desktop. Target a score of 90 or higher in each category. Check the home, About, Journey, Interests, and Contact pages, including a 375px-wide mobile viewport and a 1280px-wide desktop viewport.

@@ -16,7 +16,7 @@ const queryClient = new QueryClient();
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/experience', label: 'Experience' },
+  { href: '/experience', label: 'Journey' },
   { href: '/interests', label: 'Interests' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -28,11 +28,11 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   },
   '/about': {
     title: 'About — Mwengwe Mpekansambo',
-    description: 'Mwengwe’s background, education, and professional journey.',
+    description: 'Mwengwe’s background, outlook, and approach to finance and creativity.',
   },
   '/experience': {
-    title: 'Experience — Mwengwe Mpekansambo',
-    description: 'Professional experience in technology, media and telecom investment banking, corporate development, and asset management.',
+    title: 'Journey — Mwengwe Mpekansambo',
+    description: 'Education and professional milestones, from Stanford and Berkeley Haas to investment banking, corporate development, and company building.',
   },
   '/interests': {
     title: 'Interests — Mwengwe Mpekansambo',
@@ -139,7 +139,7 @@ function HomePage() {
             </p>
             <div className="hero-actions">
               <Link href="/about" className="button-primary" data-testid="link-hero-about">A bit about me <ArrowRight size={16} /></Link>
-              <Link href="/experience" className="text-link" data-testid="link-hero-experience">See my experience</Link>
+              <Link href="/experience" className="text-link" data-testid="link-hero-experience">Explore my journey</Link>
             </div>
           </div>
           <div className="hero-art reveal reveal-delay" aria-hidden="true">
@@ -205,32 +205,17 @@ function AboutPage() {
           <h1 className="content-heading">About me</h1>
           <p>I’m interested in how people build a life, a livelihood, and a future—and in the ideas and institutions that can help them do it.</p>
         </section>
-        <div className="two-column">
           <section className="content-section">
             <div className="section-label">A little context</div>
             <h2>Markets, meaning, and making things.</h2>
             <p className="body-copy">
-              I studied Economics at Stanford, alongside a minor in Creative Writing. That combination still feels like a good description of how I think: I like understanding how systems work, and I care about how we tell the stories inside them.
+              I bring analytical, critical, and creative thinking to my work: I like understanding how systems work, and I care about how we tell the stories inside them.
             </p>
             <p className="body-copy">
-              After Stanford, I worked in TMT investment banking at Jefferies, advising on financial transactions and capital-raising. I’m now an MBA candidate at UC Berkeley Haas. My interests also reach beyond finance: I’m passionate about women’s financial education, particularly in Zambia, women’s participation in STEM, and ethical agriculture.
+              I worked in TMT investment banking at Jefferies, advising on financial transactions and capital-raising. My interests also reach beyond finance: I’m passionate about women’s financial education, particularly in Zambia, women’s participation in STEM, and ethical agriculture.
             </p>
           </section>
-          <section className="content-section">
-            <div className="section-label">Learning, ongoing</div>
-            <h2>Education</h2>
-            <div className="education-list">
-              <article className="education-item">
-                <div><h3>UC Berkeley Haas</h3><p>MBA candidate</p></div>
-                <div className="education-date">Expected<br />May 2027</div>
-              </article>
-              <article className="education-item">
-                <div><h3>Stanford University</h3><p>BA Economics · Minor in Creative Writing</p></div>
-                <div className="education-date">June<br />2022</div>
-              </article>
-            </div>
-          </section>
-        </div>
+          <p><Link href="/experience" className="text-link">Explore my journey</Link></p>
       </main>
     </>
   );
@@ -277,53 +262,33 @@ function InterestsPage() {
   );
 }
 
-function ExperiencePage() {
+const journeyEntries = [
+  { organization: 'UC Berkeley Haas', description: 'MBA candidate, expected May 2027.' },
+  { organization: 'Gen Digital', description: 'Associate Intern, Corporate Development & Strategic Partnerships (June–August 2026), analyzing fintech acquisitions and exploring agentic AI.' },
+  { organization: 'Jefferies LLC', description: 'TMT Investment Banking Associate (June 2024–June 2025), closing 10 M&A, debt, and equity transactions totaling $60B+.' },
+  { organization: 'Jefferies LLC', description: 'TMT Investment Banking Analyst (July 2022–May 2024), supporting financial advisory, recruitment, and inclusion initiatives.' },
+  { organization: 'Stanford University', description: 'B.A. in Economics with a minor in Creative Writing, graduated June 2022.' },
+  { organization: 'Hotchkis & Wiley', description: 'Asset Management Intern (June–August 2021), researching industry risks and presenting an investment pitch on Ingredion.' },
+  { organization: 'Mwedi Innovations Limited', description: 'Director and co-founder of an agriculture company in Zambia focused on local sourcing and ethical produce management.' },
+];
+
+function JourneyPage() {
   return (
     <>
       <PageMeta route="/experience" />
       <main className="page-content" id="page-content">
         <section className="page-intro">
-          <div className="eyebrow">Work, in chapters</div>
-          <h1 className="content-heading">Experience</h1>
-          <p>A path through investing, advisory, and company building—grounded in a long-running curiosity about how organizations grow.</p>
+          <div className="eyebrow">Learning and work, in chapters</div>
+          <h1 className="content-heading">Journey</h1>
+          <p>Education, investing, advisory, and company building—a few milestones along the way.</p>
         </section>
-        <section className="experience-list" aria-label="Professional experience">
-          <article className="experience-entry">
-            <div className="experience-date">June – August 2026</div>
-            <div>
-              <h2>Gen Digital</h2>
-              <div className="experience-role">Associate Intern · Corporate Development &amp; Strategic Partnerships</div>
-              <p>Worked on fintech target merger analysis and a capstone exploring Agentic AI chat aggregation.</p>
-            </div>
-          </article>
-          <article className="experience-entry">
-            <div className="experience-date">July 2022 –<br />June 2025</div>
-            <div>
-              <h2>Jefferies LLC</h2>
-              <div className="experience-role">TMT Investment Banking · Analyst, July 2022–May 2024; Associate, June 2024–June 2025</div>
-              <p>Financial advisory and capital-raising work across Technology, Media and Telecom.</p>
-              <ul>
-                <li>Closed 10 M&amp;A, debt, and public equity transactions totaling $60B+ in deal value.</li>
-                <li>Led Women in Finance lunches with 25+ women executives.</li>
-              </ul>
-            </div>
-          </article>
-          <article className="experience-entry">
-            <div className="experience-date">June – August 2021</div>
-            <div>
-              <h2>Hotchkis &amp; Wiley</h2>
-              <div className="experience-role">Asset Management Intern</div>
-            </div>
-          </article>
-          <article className="experience-entry">
-            <div className="experience-date">Company building</div>
-            <div>
-              <h2>Mwedi Innovations Limited</h2>
-              <div className="experience-role">Director and co-founder</div>
-              <p>An agriculture company in Zambia focused on local sourcing and ethical management of plant and animal produce.</p>
-            </div>
-          </article>
-        </section>
+        <ol className="journey-list" aria-label="Education and professional experience" role="list">
+          {journeyEntries.map(({ organization, description }, index) => (
+            <li className="journey-entry" key={`${organization}-${index}`}>
+              <p><strong>{organization}</strong> — {description}</p>
+            </li>
+          ))}
+        </ol>
       </main>
     </>
   );
@@ -384,7 +349,7 @@ function Router({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
         <Switch>
           <Route path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
-          <Route path="/experience" component={ExperiencePage} />
+          <Route path="/experience" component={JourneyPage} />
           <Route path="/interests" component={InterestsPage} />
           <Route path="/contact" component={ContactPage} />
           <Route component={NotFoundPage} />

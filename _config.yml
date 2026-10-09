@@ -23,6 +23,7 @@ social:
 exclude:
   - PLAN.md
   - Change1.md
+  - Change2.md
   - README.md
   - Gemfile
   - Gemfile.lock
