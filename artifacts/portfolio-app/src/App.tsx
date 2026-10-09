@@ -202,7 +202,7 @@ function HomePage() {
           <div className="fact-strip">
             <article className="fact-card">
               <div className="fact-kicker">Now · Berkeley</div>
-              <h3>Learning to lead</h3>
+              <h3>Questioning the Status Quo</h3>
               <p>MBA candidate at UC Berkeley Haas, expected May 2027.</p>
             </article>
             <article className="fact-card">
