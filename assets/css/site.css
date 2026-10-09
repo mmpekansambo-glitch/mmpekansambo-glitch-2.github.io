@@ -324,6 +324,9 @@ p {
 .intro-actions {
   margin-top: 1.55rem;
   margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.4rem;
 }
 
 .text-link {
@@ -472,6 +475,10 @@ p {
   background: var(--paper);
   font-size: 0.72rem;
   line-height: 1.35;
+}
+
+.interest-image-note {
+  margin-top: 1.5rem;
 }
 
 .education-note,

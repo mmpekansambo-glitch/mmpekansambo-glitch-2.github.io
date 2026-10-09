@@ -90,3 +90,5 @@ wide: true
     </div>
   </article>
 </div>
+
+<p class="small-note interest-image-note">The gallery images are AI-generated illustrations of these interests, not personal photographs.</p>

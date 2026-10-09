@@ -17,6 +17,7 @@ const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/experience', label: 'Experience' },
+  { href: '/interests', label: 'Interests' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -27,11 +28,15 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   },
   '/about': {
     title: 'About — Mwengwe Mpekansambo',
-    description: 'Mwengwe’s background, education, and interests across finance, literature, agriculture, and women’s opportunity.',
+    description: 'Mwengwe’s background, education, and professional journey.',
   },
   '/experience': {
     title: 'Experience — Mwengwe Mpekansambo',
     description: 'Professional experience in technology, media and telecom investment banking, corporate development, and asset management.',
+  },
+  '/interests': {
+    title: 'Interests — Mwengwe Mpekansambo',
+    description: 'Interests beyond finance: financial education and STEM, Zambia and agriculture, literature, photography and plants, sewing and crochet.',
   },
   '/contact': {
     title: 'Contact — Mwengwe Mpekansambo',
@@ -191,11 +196,6 @@ function HomePage() {
 }
 
 function AboutPage() {
-  const interests = [
-    'Women’s financial education', 'Women in STEM', 'Agriculture', 'Literature',
-    'African politics', 'Reading', 'Writing & editing stories', 'Photography',
-    'Plants', 'Sewing', 'Crochet',
-  ];
   return (
     <>
       <PageMeta route="/about" />
@@ -231,14 +231,47 @@ function AboutPage() {
             </div>
           </section>
         </div>
-        <section className="content-section" aria-labelledby="interests-heading">
-          <div className="section-label">Outside the spreadsheet</div>
-          <h2 id="interests-heading">Things I make time for</h2>
-          <p className="body-copy">Some are causes, some are crafts, and some are simply ways of paying attention.</p>
-          <div className="interest-list">
-            {interests.map((interest) => <span className="interest-chip" key={interest} data-testid={`interest-${interest.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>{interest}</span>)}
-          </div>
+      </main>
+    </>
+  );
+}
+
+const interestTiles = [
+  { id: 'financial-stem', title: 'Financial education & STEM', image: 'financial-stem.jpg', alt: 'Two women reviewing a notebook and budget charts at a sunlit wooden table beside a laptop and plants', items: ['Women and girls’ financial education', 'Women in STEM'], note: 'Opportunity starts with access to knowledge.' },
+  { id: 'zambia-agriculture', title: 'Zambia, agriculture & politics', image: 'zambia-agriculture.jpg', alt: 'A farmer walking between rows of vegetables under a wide sky with low hills in the distance', items: ['Agriculture', 'African politics', 'Home country Zambia'], note: 'Home, and the systems that feed and govern it.' },
+  { id: 'stories', title: 'Literature & stories', image: 'stories.jpg', alt: 'Open books, a notebook with a fountain pen, and a mug on a wooden windowsill in soft light', items: ['Reading fiction', 'Writing and editing'], note: 'More than 175 novels in 2024, and around 120 in 2025.' },
+  { id: 'photography-plants', title: 'Photography & plants', image: 'photography-plants.jpg', alt: 'A vintage film camera on a potting bench among ferns, terracotta pots, and a green watering can', items: ['Photography', 'Plants'], note: 'Paying attention, one leaf and frame at a time.' },
+  { id: 'textile-crafts', title: 'Sewing & crochet', image: 'textile-crafts.jpg', alt: 'A cream crochet square with a wooden hook, thread spools, and balls of wool on linen', items: ['Sewing', 'Crochet'], note: 'Including a crocheted take on a Birkin 35.' },
+];
+
+function InterestsPage() {
+  const base = import.meta.env.BASE_URL;
+  return (
+    <>
+      <PageMeta route="/interests" />
+      <main className="page-content" id="page-content">
+        <section className="page-intro">
+          <div className="eyebrow">Outside the spreadsheet</div>
+          <h1 className="content-heading">Interests</h1>
+          <p>Some are causes, some are crafts, and some are simply ways of paying attention. Here are the places my curiosity keeps returning to.</p>
         </section>
+        <section className="interest-gallery" aria-label="Interest categories">
+          {interestTiles.map((tile, index) => (
+            <article className="interest-tile" key={tile.id} data-testid={`card-interest-${tile.id}`} style={{ animationDelay: `${index * 70}ms` }}>
+              <div className="interest-media">
+                <img src={`${base}images/interests/${tile.image}`} alt={tile.alt} loading={index < 3 ? 'eager' : 'lazy'} width={1024} height={1024} />
+              </div>
+              <div className="interest-body">
+                <h2>{tile.title}</h2>
+                <ul className="interest-tags">
+                  {tile.items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+                <p>{tile.note}</p>
+              </div>
+            </article>
+          ))}
+        </section>
+        <p className="image-note">Images are AI-generated representations, not personal photographs.</p>
       </main>
     </>
   );
@@ -352,6 +385,7 @@ function Router({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
           <Route path="/" component={HomePage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/experience" component={ExperiencePage} />
+          <Route path="/interests" component={InterestsPage} />
           <Route path="/contact" component={ContactPage} />
           <Route component={NotFoundPage} />
         </Switch>
