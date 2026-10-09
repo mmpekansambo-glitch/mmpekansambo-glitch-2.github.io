@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import { ArrowDownRight, ArrowRight, Leaf, Mail, Moon, Sun } from 'lucide-react';
+import { ArrowDownRight, ArrowRight, Leaf, Moon, Sun } from 'lucide-react';
 import {
   Link,
   Route,
@@ -332,14 +332,12 @@ function ContactPage() {
           <p>For thoughtful conversations about finance, technology, women’s opportunity, agriculture, or a particularly good book.</p>
         </section>
         <section className="contact-panel" aria-labelledby="contact-heading">
-          <div className="section-label">Write to me</div>
+          <div className="section-label">Connect on LinkedIn</div>
           <h2 id="contact-heading">The best conversations start somewhere.</h2>
-          <p>You can reach me at my email address.</p>
-          <p>This address is public. Selecting the link opens your email app to start a message.</p>
-          <a className="email-link" href="mailto:mmpekansambo@alumni.stanford.edu" data-testid="link-public-email">
-            <Mail size={17} /> mmpekansambo@alumni.stanford.edu <ArrowRight size={16} />
+          <p>Send me a message directly through LinkedIn.</p>
+          <a className="contact-link" href="https://www.linkedin.com/in/mmpekansambo" target="_blank" rel="noopener noreferrer" data-testid="link-contact-linkedin">
+            Message me on LinkedIn <ArrowRight size={16} />
           </a>
-          <p className="contact-social"><a href="https://www.linkedin.com/in/mmpekansambo" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <ArrowRight size={14} /></a></p>
         </section>
       </main>
     </>
