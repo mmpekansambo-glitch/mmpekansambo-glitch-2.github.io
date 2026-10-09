@@ -197,7 +197,7 @@ function HomePage() {
               <div className="section-label">A few chapters</div>
               <h2 id="quick-facts-title" className="content-heading">Where I’m coming from</h2>
             </div>
-            <p>Economics to finance to the next question.</p>
+            <p>Doors that questions have opened</p>
           </div>
           <div className="fact-strip">
             <article className="fact-card">
