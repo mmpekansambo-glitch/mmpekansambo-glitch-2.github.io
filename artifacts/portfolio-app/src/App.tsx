@@ -334,7 +334,7 @@ function ContactPage() {
         <section className="contact-panel" aria-labelledby="contact-heading">
           <div className="section-label">Write to me</div>
           <h2 id="contact-heading">The best conversations start somewhere.</h2>
-          <p>You can reach me at my public Stanford alumni address.</p>
+          <p>You can reach me at my email address.</p>
           <p>This address is public. Selecting the link opens your email app to start a message.</p>
           <a className="email-link" href="mailto:mmpekansambo@alumni.stanford.edu" data-testid="link-public-email">
             <Mail size={17} /> mmpekansambo@alumni.stanford.edu <ArrowRight size={16} />
