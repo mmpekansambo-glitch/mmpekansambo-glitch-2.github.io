@@ -317,7 +317,10 @@ function JourneyPage() {
         </section>
         <ol className="journey-list" aria-label="Education and professional experience" role="list">
           {journeyEntries.map(({ organization, description, endDate, endDateTime, endDateQualifier }, index) => (
-            <li className="journey-entry" key={`${organization}-${index}`}>
+            <li
+              className={`journey-entry ${endDate ? 'journey-entry--dated' : 'journey-entry--undated'}`}
+              key={`${organization}-${index}`}
+            >
               <p><strong>{organization}</strong> — {description}</p>
               {endDate && endDateTime && (
                 <div className="journey-date-group">
@@ -328,7 +331,7 @@ function JourneyPage() {
             </li>
           ))}
         </ol>
-        <p className="journey-note">Dated milestones are listed newest first; Mwedi Innovations is included without a date because none was supplied.</p>
+        <p className="journey-note">Dated milestones are listed newest first; arrows point toward more recent chapters. Mwedi Innovations has no date listed.</p>
       </main>
     </>
   );
