@@ -22,7 +22,7 @@ The API server and database workspace are pre-existing project scaffolding and a
 
 ## Where things live
 
-- Root Markdown pages: `index.md`, `about.md`, `experience.md`, `contact.md`
+- Root Markdown pages: `index.md`, `about.md`, `interests.md`, `experience.md`, `contact.md`
 - Shared Jekyll structure: `_layouts/`, `_includes/`, `_config.yml`
 - Root site assets: `assets/css/`, `assets/js/`, `favicon.svg`
 - React companion: `artifacts/portfolio-app/`
