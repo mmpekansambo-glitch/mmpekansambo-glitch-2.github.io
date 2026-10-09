@@ -8,6 +8,16 @@ lang: en
 markdown: kramdown
 permalink: pretty
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path: "/assets/images/mwengwe-social-card.jpg"
+        alt: "Mwengwe Mpekansambo smiling beneath vivid autumn leaves, with her name and the phrase Finance, stories and possibility."
+        width: 1200
+        height: 630
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap

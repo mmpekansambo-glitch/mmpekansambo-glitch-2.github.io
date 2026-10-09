@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: "Mwengwe Mpekansambo — Finance, stories & possibility"
 description: "Meet Mwengwe Mpekansambo: MBA candidate, former TMT investment banking associate, and advocate for women's financial education and STEM."
 permalink: /
 wide: true

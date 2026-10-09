@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "H0kcAhHUFPDKNu9EOxCBm"
+uri = "file://assets/images/mwengwe-social-card.jpg"
+type = "image"
+title = "Portfolio social preview card"
+description = "1200×630 Open Graph and Twitter image using Mwengwe’s autumn portrait and portfolio palette."
+logical_id = "9ccf450c-6bed-474e-a032-ec027f7b983f"
+content_hash = "sha256:723b39bc7386a62d609399cf31b8af3f5c338ba02256e5086a60301d9241c932"
+size = 201207
+mtime_ms = 1791518018542
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:e83d9315-6f15-429f-9494-19579d924181/9ccf450c-6bed-474e-a032-ec027f7b983f/58533ac6-576a-4780-ba1c-75ce3cef6e08"
+storage_version_token = "1791518342791882"
+content_type = "image/jpeg"

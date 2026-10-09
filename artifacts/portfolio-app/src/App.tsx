@@ -13,6 +13,8 @@ import {
 } from 'wouter';
 
 const queryClient = new QueryClient();
+
+const socialCardImage = `${import.meta.env.BASE_URL}images/mwengwe-social-card.jpg`;
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
@@ -66,6 +68,16 @@ function PageMeta({ route }: { route: string }) {
     setMeta('meta[property="og:title"]', 'content', content.title);
     setMeta('meta[property="og:description"]', 'content', content.description);
     setMeta('meta[property="og:type"]', 'content', 'website');
+    setMeta('meta[property="og:url"]', 'content', `${window.location.origin}${window.location.pathname}`);
+    setMeta('meta[property="og:image"]', 'content', new URL(socialCardImage, window.location.origin).href);
+    setMeta('meta[property="og:image:width"]', 'content', '1200');
+    setMeta('meta[property="og:image:height"]', 'content', '630');
+    setMeta('meta[property="og:image:alt"]', 'content', 'Mwengwe Mpekansambo smiling beneath vivid autumn leaves, with her name and the phrase Finance, stories and possibility.');
+    setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image');
+    setMeta('meta[name="twitter:title"]', 'content', content.title);
+    setMeta('meta[name="twitter:description"]', 'content', content.description);
+    setMeta('meta[name="twitter:image"]', 'content', new URL(socialCardImage, window.location.origin).href);
+    setMeta('meta[name="twitter:image:alt"]', 'content', 'Mwengwe Mpekansambo smiling beneath vivid autumn leaves, with her name and the phrase Finance, stories and possibility.');
   }, [route]);
   return null;
 }
