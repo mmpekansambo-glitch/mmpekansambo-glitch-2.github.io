@@ -464,7 +464,7 @@
   .page-intro { padding: 62px 0 40px; }
   .two-column { grid-template-columns: 1fr; gap: 32px; }
   .content-section { padding-bottom: 48px; }
-  .journey-entry { padding: 20px 0; }
+  .journey-entry { padding: 20px 16px; }
   .journey-list { margin-bottom: 14px; }
   .journey-note { margin-bottom: 68px; }
   .contact-panel { margin-bottom: 65px; }
