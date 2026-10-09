@@ -222,6 +222,10 @@ button {
   padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(4rem, 10vw, 7.5rem);
 }
 
+.site-main-wide {
+  width: min(100% - 2.5rem, 72rem);
+}
+
 h1,
 h2,
 h3,
@@ -320,6 +324,9 @@ p {
 .intro-actions {
   margin-top: 1.55rem;
   margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.4rem;
 }
 
 .text-link {
@@ -392,6 +399,86 @@ p {
 
 .prose-section h2 {
   font-size: clamp(1.55rem, 3.5vw, 1.9rem);
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.interest-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--paper-bright);
+  box-shadow: var(--shadow);
+}
+
+.interest-card-image {
+  aspect-ratio: 1.48;
+  margin: 0;
+  overflow: hidden;
+  background: var(--moss-pale);
+}
+
+.interest-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 320ms ease;
+}
+
+.interest-card:hover .interest-card-image img {
+  transform: scale(1.035);
+}
+
+.interest-card-body {
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
+.interest-category {
+  margin-bottom: 0.45rem;
+  color: var(--moss-deep);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.interest-card h2 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+}
+
+.interest-card-body > p:not(.interest-category) {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interest-tags li {
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.interest-image-note {
+  margin-top: 1.5rem;
 }
 
 .education-note,
@@ -573,6 +660,14 @@ p {
     width: min(100% - 2rem, 46rem);
     min-height: calc(100vh - 13rem);
   }
+
+  .site-main-wide {
+    width: min(100% - 2rem, 46rem);
+  }
+
+  .interest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 430px) {
@@ -587,6 +682,10 @@ p {
   .closing-note {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .interest-grid {
+    grid-template-columns: 1fr;
   }
 
   .closing-note p {

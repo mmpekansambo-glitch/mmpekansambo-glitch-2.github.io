@@ -13,7 +13,7 @@ The site uses GitHub Pages' Jekyll build. No separate build command is needed to
 
 ## Update the site
 
-- Edit `index.md`, `about.md`, `experience.md`, or `contact.md` to update the page content.
+- Edit `index.md`, `about.md`, `interests.md`, `experience.md`, or `contact.md` to update the page content.
 - Each page has YAML front matter for its title, description, and permalink.
 - Shared page structure is in `_layouts/default.html`; navigation and footer are in `_includes/`.
 - Visual styles are in `assets/css/site.css`. The small `assets/js/theme.js` file handles the light/dark theme switch.
