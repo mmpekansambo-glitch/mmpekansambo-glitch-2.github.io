@@ -45,6 +45,8 @@
   --accent: 36 90% 66%;
   --accent-foreground: 285 22% 20%;
   --indigo: 226 42% 38%;
+  --leaf: 93 25% 38%;
+  --leaf-soft: 79 24% 48%;
   --destructive: 5 53% 45%;
   --destructive-foreground: 43 45% 96%;
   --popover: 38 70% 98%;
@@ -74,6 +76,8 @@
   --accent: 34 67% 45%;
   --accent-foreground: 36 59% 91%;
   --indigo: 223 64% 78%;
+  --leaf: 91 29% 68%;
+  --leaf-soft: 79 32% 58%;
   --destructive: 5 43% 57%;
   --destructive-foreground: 43 45% 96%;
   --popover: 280 22% 17%;
@@ -232,6 +236,29 @@
   min-height: 455px;
   display: grid;
   place-items: center;
+}
+.hero-art::before,
+.hero-art::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(22px);
+  pointer-events: none;
+}
+.hero-art::before {
+  top: 8%;
+  left: -120px;
+  width: 240px;
+  height: 280px;
+  background: radial-gradient(ellipse, hsl(var(--leaf) / .44), hsl(var(--leaf-soft) / .28) 42%, transparent 74%);
+}
+.hero-art::after {
+  right: -120px;
+  bottom: 3%;
+  width: 250px;
+  height: 230px;
+  background: radial-gradient(ellipse, hsl(var(--leaf) / .38), hsl(var(--leaf-soft) / .24) 44%, transparent 74%);
 }
 .portrait-paper {
   position: relative;

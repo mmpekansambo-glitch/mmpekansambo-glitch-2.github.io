@@ -135,7 +135,7 @@ function HomePage() {
             <div className="eyebrow">A little about what moves me</div>
             <h1 className="hero-title" id="home-title">From numbers<br />to narrative<br />to <em>nexus</em></h1>
             <p className="hero-copy">
-              I’m Mwengwe Mpekansambo: a Stanford-trained economist, former TMT investment banker, and MBA candidate at Berkeley Haas. I’m drawn to the places where capital, creativity, and people’s everyday lives meet.
+              I’m Mwengwe. I’m drawn to the places where capital, creativity, and people’s everyday lives meet, and to what becomes possible when they work together. I’ve followed that curiosity from Stanford to supporting the advisement of technology and media companies, and working alongside an agricultural business in Zambia, and now an MBA at Berkeley Haas.
             </p>
             <div className="hero-actions">
               <Link href="/about" className="button-primary" data-testid="link-hero-about">A bit about me <ArrowRight size={16} /></Link>

@@ -12,6 +12,8 @@
   --clay: #aa4326;
   --clay-pale: #f6daca;
   --gold: #f2b449;
+  --leaf: #526940;
+  --leaf-soft: #81935d;
   --line: #e3cbb9;
   --line-strong: #c4a59a;
   --serif: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -35,6 +37,8 @@
   --clay: #f5b079;
   --clay-pale: #593a3c;
   --gold: #dca44e;
+  --leaf: #a6bc89;
+  --leaf-soft: #a1ad72;
   --line: #57455e;
   --line-strong: #796080;
   --shadow: 0 16px 44px rgba(0, 0, 0, 0.22);
@@ -296,6 +300,32 @@ p {
   margin: 0 auto;
 }
 
+.home-portrait-group::before,
+.home-portrait-group::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.home-portrait-group::before {
+  top: 4%;
+  left: -125px;
+  width: 240px;
+  height: 280px;
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--leaf) 44%, transparent), color-mix(in srgb, var(--leaf-soft) 28%, transparent) 42%, transparent 74%);
+}
+
+.home-portrait-group::after {
+  right: -130px;
+  bottom: 3%;
+  width: 250px;
+  height: 230px;
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--leaf) 38%, transparent), color-mix(in srgb, var(--leaf-soft) 24%, transparent) 44%, transparent 74%);
+}
+
 .home-portrait {
   position: relative;
   margin: 0;
@@ -364,6 +394,18 @@ p {
   height: 140px;
   color: var(--clay);
   transform: rotate(35deg);
+}
+
+.portrait-sprig.left {
+  top: auto;
+  right: auto;
+  top: 20px;
+  bottom: auto;
+  left: -34px;
+  width: 82px;
+  height: 110px;
+  color: var(--moss-deep);
+  transform: rotate(-28deg);
 }
 
 .home-intro h1 {
@@ -762,6 +804,21 @@ p {
     width: 125px;
     left: -12px;
     bottom: -8px;
+  }
+
+  .portrait-sprig {
+    right: -18px;
+    width: 82px;
+    height: 115px;
+  }
+
+  .portrait-sprig.left {
+    right: auto;
+    left: -16px;
+    top: 20px;
+    bottom: auto;
+    width: 66px;
+    height: 90px;
   }
 
   .site-header-inner {
