@@ -118,9 +118,9 @@ function LeafIllustration({ className }: { className: string }) {
   return (
     <svg className={`art-leaf ${className}`} viewBox="0 0 120 150" fill="none" aria-hidden="true">
       <path d="M59 141C58 98 62 59 80 17" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M62 105C29 103 13 82 14 54C41 55 62 70 62 105Z" fill="#78906E" stroke="#526B50" strokeWidth="1.2" />
-      <path d="M62 105L20 61M66 81C92 77 105 57 104 33C81 35 66 53 66 81Z" fill="#96A77A" stroke="#526B50" strokeWidth="1.2" />
-      <path d="M66 81L99 40M59 126C36 127 23 117 18 99C39 95 55 106 59 126Z" fill="#6F8969" stroke="#526B50" strokeWidth="1.2" />
+      <path d="M62 105C29 103 13 82 14 54C41 55 62 70 62 105Z" fill="currentColor" fillOpacity=".65" stroke="currentColor" strokeWidth="1.2" />
+      <path d="M62 105L20 61M66 81C92 77 105 57 104 33C81 35 66 53 66 81Z" fill="currentColor" fillOpacity=".35" stroke="currentColor" strokeWidth="1.2" />
+      <path d="M66 81L99 40M59 126C36 127 23 117 18 99C39 95 55 106 59 126Z" fill="currentColor" fillOpacity=".5" stroke="currentColor" strokeWidth="1.2" />
     </svg>
   );
 }
@@ -133,7 +133,7 @@ function HomePage() {
         <section className="home-hero" aria-labelledby="home-title">
           <div className="reveal">
             <div className="eyebrow">A little about what moves me</div>
-            <h1 className="hero-title" id="home-title">Finance, stories<br />&amp; <em>possibility.</em></h1>
+            <h1 className="hero-title" id="home-title">From numbers<br />to narrative<br />to <em>nexus</em></h1>
             <p className="hero-copy">
               I’m Mwengwe Mpekansambo: a Stanford-trained economist, former TMT investment banker, and MBA candidate at Berkeley Haas. I’m drawn to the places where capital, creativity, and people’s everyday lives meet.
             </p>
@@ -142,15 +142,30 @@ function HomePage() {
               <Link href="/experience" className="text-link" data-testid="link-hero-experience">Explore my journey</Link>
             </div>
           </div>
-          <div className="hero-art reveal reveal-delay" aria-hidden="true">
+          <div className="hero-art reveal reveal-delay">
             <LeafIllustration className="left" />
             <LeafIllustration className="right" />
-            <div className="portrait-paper">
-              <div className="portrait-scene">
-                <div className="sun-disc" />
-              </div>
+            <figure className="portrait-paper">
+              <img
+                className="portrait-photo"
+                src={`${import.meta.env.BASE_URL}images/mwengwe-smiling.jpg`}
+                alt="Mwengwe smiling on a wooden bench beneath orange autumn leaves."
+                width={1200}
+                height={800}
+                fetchPriority="high"
+                decoding="async"
+              />
+              <figcaption className="paper-caption">curiosity, always <ArrowDownRight size={15} aria-hidden="true" /></figcaption>
+            </figure>
+            <div className="portrait-companion">
+              <img
+                src={`${import.meta.env.BASE_URL}images/mwengwe-autumn.jpg`}
+                alt="Mwengwe sitting on the bench, smiling to the side among autumn leaves."
+                width={700}
+                height={467}
+                decoding="async"
+              />
             </div>
-            <div className="paper-caption">curiosity, always <ArrowDownRight size={13} /></div>
           </div>
         </section>
 
